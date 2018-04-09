@@ -5,6 +5,7 @@ var webpack = require('webpack');
 var path = require('path');
 var utils = require('./utils');
 
+
 function resolve(relPath) {
     return path.resolve(__dirname, relPath);
 }
@@ -48,5 +49,11 @@ module.exports = {
                 }]
             }
         ]
-    }
+    },
+    plugins: [
+  	  new webpack.ProvidePlugin({
+  	    $: "jquery",
+  	    jQuery: "jquery"
+  	  })
+  	]
 }

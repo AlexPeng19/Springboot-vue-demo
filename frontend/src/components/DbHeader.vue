@@ -1,53 +1,63 @@
 <template>
-    <header style="background-color: rgb(10, 47, 88);">
-        <div class="text-logo">{{msg}}</div>
-        <p class="meta">This demo project for express new develop practice demo.</p>
-        <ul class="header-operations">
-        </ul>
-    </header>
+<header class="main-header">
+	<a href="" class="logo"> <!-- mini logo for sidebar mini 50x50 pixels -->
+		<span class="logo-mini"><b>E</b>DB</span> <!-- logo for regular state and mobile devices -->
+		<span class="logo-lg" data-localize="db-aas"><b></b></span>
+	</a>
+	<nav class="navbar navbar-static-top">
+		<a class="sidebar-toggle" data-toggle="push-menu" role="button"> <span
+			class="sr-only">Toggle navigation</span> <span class="icon-bar"></span>
+			<span class="icon-bar"></span> <span class="icon-bar"></span>
+		</a>
+
+		<div class="navbar-custom-menu">
+			<ul class="nav navbar-nav">
+				<li class="dropdown notifications-menu"><a href="#"
+					class="dropdown-toggle" data-toggle="dropdown"> <i
+						class="fa fa-bell-o"></i> <span class="label label-warning">10</span>
+				</a>
+					<ul class="dropdown-menu">
+						<li class="header">You have 10 notifications</li>
+						<li>
+							<ul class="menu">
+								<li><a href="#"> <i class="fa fa-users text-aqua"></i>
+										5 new members joined today
+								</a></li>
+							</ul>
+						</li>
+						<li class="footer"><a href="#">View all</a></li>
+					</ul></li>
+				<li class="dropdown user user-menu" id="drop_down"><a
+					class="dropdown-toggle" data-toggle="dropdown"
+					aria-expanded="false"> <img src="img/user2-160x160.jpg"
+						class="user-image" alt="User Image"> <span id="login_name"
+						class="hidden-xs"></span>
+				</a>
+					<ul class="dropdown-menu">
+						<!-- User image -->
+						<li class="user-header"><img src="img/user2-160x160.jpg"
+							class="img-circle" alt="User Image">
+							<p>
+								Alex Peng - Web Developer <small>Member since Nov. 2012</small>
+							</p></li>
+						<!-- Menu Footer-->
+						<li class="user-footer">
+							<div class="pull-right">
+								<a href="#login" class="btn btn-default btn-flat">Sign out</a>
+							</div>
+						</li>
+					</ul></li>
+			</ul>
+		</div>
+	</nav>
+</header>
 </template>
 
 <script>
-    export default {
-        name: 'db-header',
-        data () {
-            return {
-                msg: 'SpringBoot-vue'
-            }
-        }
-    }
+export default {
+    name: 'db-header'
+}
 </script>
 
-<style>
-    header {
-        height: 70px;
-        position: absolute;
-        width: 100%;
-        top: 0;
-        left: 0;
-        padding: 0 20px;
-        z-index: 1;
-        box-sizing: border-box;
-    }
-
-    .text-logo {
-        display: inline-block;
-        vertical-align: middle;
-        border-style: none;
-        position: relative;
-        top: 26px;
-        right: -20px;
-        font-size: 25px;
-        color: white;
-
-    }
-
-    .meta {
-        color: #7e95c5;
-        width: 200px;
-        display: block;
-        margin: -5px 0 0 225px;
-        font-weight: 700;
-        font-size: 0.3rem;
-    }
+<style scoped>
 </style>
